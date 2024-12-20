@@ -10,7 +10,8 @@ on:
 jobs:
   build:
     runs-on: macos-latest
-    # permissions: {}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Install dependencies
         run: curl https://api.github.com/repos/microsoft/ripgrep-prebuilt/releases/tags/v13.0.0-10 

@@ -27,7 +27,7 @@ jobs:
           python-version: "3.11"
       
       - name: Test logs
-        run:
+        run: |
           ls -ltrh
           pwd
           ls -ltrh ../

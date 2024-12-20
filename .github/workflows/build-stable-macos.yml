@@ -28,8 +28,11 @@ jobs:
       
       - name: Test logs
         run: |
+          echo "------"
           ls -ltrh
+          echo "------"
           pwd
+          echo "------"
           ls -ltrh ../
 
     # - name: Install dependencies

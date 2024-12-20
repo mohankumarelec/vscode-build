@@ -29,9 +29,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: |
-          npm install -g node-gyp
-          npm config set python python3
+        run: npm install -g node-gyp
 
       - name: Install npm dependencies
         run: cd vscode-source && npm install

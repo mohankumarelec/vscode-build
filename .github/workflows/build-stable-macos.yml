@@ -12,14 +12,17 @@ jobs:
     runs-on: macos-latest
     # permissions: {}
     steps:
+      - name: Install dependencies
+        run: curl https://api.github.com/repos/microsoft/ripgrep-prebuilt/releases/tags/v13.0.0-10 
+
+      - name: Environment
+        run: env
+
       - uses: actions/checkout@v4
         with:
           repository: "microsoft/vscode"
           ref: "fabdb6a30b49f79a7aba0f2ad9df9b399473380f"
           path: "vscode-source"
-
-      - name: Install dependencies
-        run: curl https://api.github.com/repos/microsoft/ripgrep-prebuilt/releases/tags/v13.0.0-10 
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
